@@ -15,7 +15,7 @@ class Product(Base):
     image_url = Column(String)
     created_at = Column(DateTime, default=datetime.utcnow())
 
-    categgory = realationship('Category', back_populates='products')
+    category = realationship('Category', back_populates='products')
 
     def __repr__(self):
         return f"<Product(id={self.id}, name='{self.name}', price='{self.price}')>"
